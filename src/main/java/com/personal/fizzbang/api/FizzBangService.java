@@ -7,8 +7,10 @@ public class FizzBangService {
     public String fizzBangTheNumber(int input) {
         if (input == 3) {
             return FIZZ;
-        } else {
+        } else if (input == 5) {
             return BANG;
+        } else {
+            return null;
         }
     }
 }
