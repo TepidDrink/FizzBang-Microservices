@@ -15,6 +15,12 @@ public class FizzBangControllerTests {
 
     @Test
     public void testControllerReturnsFizz() {
-        assertEquals("fizz", fizzBangController.processRequest());
+        assertEquals("fizz", fizzBangController.processRequest(null));
+    }
+
+    @Test
+    public void testControllerTakesRequestObject() {
+        NumberRequest numberRequest = new NumberRequest();
+        fizzBangController.processRequest(numberRequest);
     }
 }
