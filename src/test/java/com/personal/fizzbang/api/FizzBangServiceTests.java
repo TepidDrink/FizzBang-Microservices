@@ -15,7 +15,7 @@ public class FizzBangServiceTests {
     private FizzBangService fizzBangService;
 
     @Test
-    public void test_three_fizz() {
+    public void test_3_fizz() {
         String output = fizzBangService.fizzBangTheNumber(3);
         assertEquals(FIZZ, output);
     }
