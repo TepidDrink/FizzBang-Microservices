@@ -5,6 +5,7 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.junit.MockitoJUnitRunner;
 
+import static com.personal.fizzbang.api.FizzBangService.BANG;
 import static com.personal.fizzbang.api.FizzBangService.FIZZ;
 import static org.junit.Assert.assertEquals;
 
@@ -23,6 +24,6 @@ public class FizzBangServiceTests {
     @Test
     public void test_5_bang() {
         String output = fizzBangService.fizzBangTheNumber(5);
-        assertEquals("bang", output);
+        assertEquals(BANG, output);
     }
 }
