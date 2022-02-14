@@ -38,4 +38,10 @@ public class FizzBangServiceTests {
         String output = fizzBangService.fizzBangTheNumber(6);
         assertEquals(FIZZ, output);
     }
+
+    @Test
+    public void test_10_returns_bang() {
+        String output = fizzBangService.fizzBangTheNumber(10);
+        assertEquals(BANG, output);
+    }
 }
