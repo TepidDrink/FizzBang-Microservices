@@ -1,10 +1,10 @@
 package com.personal.fizzbang.api;
 
+import lombok.Builder;
 import lombok.Getter;
-import lombok.Setter;
 
 @Getter
-@Setter
+@Builder
 public class FizzBangResponse {
     private String output;
 }

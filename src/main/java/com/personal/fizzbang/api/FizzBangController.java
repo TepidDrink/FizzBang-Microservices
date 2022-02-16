@@ -15,6 +15,6 @@ public class FizzBangController {
     @PostMapping("/fizzbang")
     @ResponseBody
     public FizzBangResponse processRequest(@RequestBody NumberRequest numberRequest) {
-        return fizzBangService.fizzBangTheNumber(numberRequest.getInput());
+        return fizzBangService.fizzBangTheRequest(numberRequest);
     }
 }

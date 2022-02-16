@@ -1,5 +1,6 @@
 package com.personal.fizzbang.api;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -15,39 +16,52 @@ public class FizzBangServiceTests {
     @InjectMocks
     private FizzBangService fizzBangService;
 
+    private NumberRequest request;
+
+    @Before
+    public void setup() {
+        request = new NumberRequest();
+    }
+
     @Test
     public void test_3_fizz() {
-        FizzBangResponse response = fizzBangService.fizzBangTheNumber(3);
+        request.setInput(3);
+        FizzBangResponse response = fizzBangService.fizzBangTheRequest(request);
         assertEquals(FIZZ, response.getOutput());
     }
 
     @Test
     public void test_5_bang() {
-        FizzBangResponse response = fizzBangService.fizzBangTheNumber(5);
+        request.setInput(5);
+        FizzBangResponse response = fizzBangService.fizzBangTheRequest(request);
         assertEquals(BANG, response.getOutput());
     }
 
     @Test
     public void test_1_returns_null() {
-        FizzBangResponse response = fizzBangService.fizzBangTheNumber(1);
+        request.setInput(1);
+        FizzBangResponse response = fizzBangService.fizzBangTheRequest(request);
         assertEquals(null, response.getOutput());
     }
 
     @Test
     public void test_6_returns_fizz() {
-        FizzBangResponse response = fizzBangService.fizzBangTheNumber(6);
+        request.setInput(6);
+        FizzBangResponse response = fizzBangService.fizzBangTheRequest(request);
         assertEquals(FIZZ, response.getOutput());
     }
 
     @Test
     public void test_10_returns_bang() {
-        FizzBangResponse response = fizzBangService.fizzBangTheNumber(10);
+        request.setInput(10);
+        FizzBangResponse response = fizzBangService.fizzBangTheRequest(request);
         assertEquals(BANG, response.getOutput());
     }
 
     @Test
     public void test_15_returns_fizzbang() {
-        FizzBangResponse response = fizzBangService.fizzBangTheNumber(15);
+        request.setInput(15);
+        FizzBangResponse response = fizzBangService.fizzBangTheRequest(request);
         assertEquals(FIZZ + BANG, response.getOutput());
     }
 }

@@ -7,9 +7,10 @@ public class FizzBangService {
     static final String FIZZ = "fizz";
     static final String BANG = "bang";
 
-    public FizzBangResponse fizzBangTheNumber(Integer input) {
-        FizzBangResponse fizzBangResponse = new FizzBangResponse();
-        fizzBangResponse.setOutput(fizzBangCalculation(input));
+    public FizzBangResponse fizzBangTheRequest(NumberRequest request) {
+        FizzBangResponse fizzBangResponse = FizzBangResponse.builder()
+                .output(fizzBangCalculation(request.getInput()))
+                .build();
         return fizzBangResponse;
     }
 
