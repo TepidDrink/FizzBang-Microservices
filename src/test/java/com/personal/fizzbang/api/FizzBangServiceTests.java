@@ -17,37 +17,37 @@ public class FizzBangServiceTests {
 
     @Test
     public void test_3_fizz() {
-        String output = fizzBangService.fizzBangTheNumber(3);
-        assertEquals(FIZZ, output);
+        FizzBangResponse response = fizzBangService.fizzBangTheNumber(3);
+        assertEquals(FIZZ, response.getOutput());
     }
 
     @Test
     public void test_5_bang() {
-        String output = fizzBangService.fizzBangTheNumber(5);
-        assertEquals(BANG, output);
+        FizzBangResponse response = fizzBangService.fizzBangTheNumber(5);
+        assertEquals(BANG, response.getOutput());
     }
 
     @Test
     public void test_1_returns_null() {
-        String output = fizzBangService.fizzBangTheNumber(1);
-        assertEquals(null, output);
+        FizzBangResponse response = fizzBangService.fizzBangTheNumber(1);
+        assertEquals(null, response.getOutput());
     }
 
     @Test
     public void test_6_returns_fizz() {
-        String output = fizzBangService.fizzBangTheNumber(6);
-        assertEquals(FIZZ, output);
+        FizzBangResponse response = fizzBangService.fizzBangTheNumber(6);
+        assertEquals(FIZZ, response.getOutput());
     }
 
     @Test
     public void test_10_returns_bang() {
-        String output = fizzBangService.fizzBangTheNumber(10);
-        assertEquals(BANG, output);
+        FizzBangResponse response = fizzBangService.fizzBangTheNumber(10);
+        assertEquals(BANG, response.getOutput());
     }
 
     @Test
     public void test_15_returns_fizzbang() {
-        String output = fizzBangService.fizzBangTheNumber(15);
-        assertEquals(FIZZ + BANG, output);
+        FizzBangResponse response = fizzBangService.fizzBangTheNumber(15);
+        assertEquals(FIZZ + BANG, response.getOutput());
     }
 }
