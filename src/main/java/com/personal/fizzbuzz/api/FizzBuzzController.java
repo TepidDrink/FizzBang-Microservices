@@ -37,7 +37,7 @@ public class FizzBuzzController {
     @Getter
     @RequiredArgsConstructor
     @JsonSerialize
-    class BadRequestException {
+    private static class BadRequestException {
         private final int status;
         private final String message;
     }
