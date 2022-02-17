@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,9 +18,16 @@ public class FizzBuzzController {
     private FizzBuzzService fizzBuzzService;
 
     @PostMapping("/fizzbuzz")
-    @ResponseBody
     public FizzBuzzResponse processRequest(@RequestBody NumberRequest numberRequest) {
         return fizzBuzzService.fizzBuzzTheRequest(numberRequest);
+    }
+
+    @RequestMapping(path = "*",
+            method = {RequestMethod.GET, RequestMethod.POST, RequestMethod.DELETE, RequestMethod.HEAD,
+                    RequestMethod.OPTIONS, RequestMethod.PATCH, RequestMethod.PUT, RequestMethod.TRACE})
+    @ResponseStatus(value= HttpStatus.BAD_REQUEST)
+    public BadRequestException processRequestWrongEndpoint(@RequestBody NumberRequest numberRequest) {
+        return handleAllExceptions(null);
     }
 
     @ExceptionHandler
