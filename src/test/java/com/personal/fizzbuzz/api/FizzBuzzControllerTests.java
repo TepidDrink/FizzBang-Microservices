@@ -7,6 +7,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
+import static org.junit.Assert.assertNotNull;
+
 @RunWith(MockitoJUnitRunner.class)
 public class FizzBuzzControllerTests {
 
@@ -18,7 +20,18 @@ public class FizzBuzzControllerTests {
 
     @Test
     public void testControllerTakesRequestObject() {
-        NumberRequest numberRequest = new NumberRequest();
-        fizzBuzzController.processRequest(numberRequest);
+        fizzBuzzController.processRequest(new NumberRequest());
+    }
+
+    @Test
+    public void testControllerAllOtherEndpointMethodReturnsException() {
+        FizzBuzzController.BadRequestException badRequestException = fizzBuzzController.processRequestWrongEndpoint(new NumberRequest());
+        assertNotNull(badRequestException);
+    }
+
+    @Test
+    public void testExceptionHandlerMethodReturnsException() {
+        FizzBuzzController.BadRequestException badRequestException = fizzBuzzController.handleAllExceptions(new Exception());
+        assertNotNull(badRequestException);
     }
 }
