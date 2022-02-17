@@ -64,4 +64,11 @@ public class FizzBangServiceTests {
         FizzBangResponse response = fizzBangService.fizzBangTheRequest(request);
         assertEquals(FIZZ + BANG, response.getOutput());
     }
+
+    @Test
+    public void test_0_returns_fizzbang() {
+        request.setInput(0);
+        FizzBangResponse response = fizzBangService.fizzBangTheRequest(request);
+        assertEquals(FIZZ + BANG, response.getOutput());
+    }
 }
