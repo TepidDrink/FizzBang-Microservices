@@ -1,6 +1,6 @@
-package com.personal.fizzbang.api;
+package com.personal.fizzbuzz.api;
 
-import com.personal.fizzbang.api.schema.NumberRequest;
+import com.personal.fizzbuzz.api.schema.NumberRequest;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -8,13 +8,13 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
 @RunWith(MockitoJUnitRunner.class)
-public class FizzBangControllerTests {
+public class FizzBuzzControllerTests {
 
     @Mock
-    private FizzBangService fizzBangService;
+    private FizzBuzzService fizzBangService;
 
     @InjectMocks
-    private FizzBangController fizzBangController;
+    private FizzBuzzController fizzBangController;
 
     @Test
     public void testControllerTakesRequestObject() {

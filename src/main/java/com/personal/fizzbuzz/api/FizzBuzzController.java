@@ -1,28 +1,25 @@
-package com.personal.fizzbang.api;
+package com.personal.fizzbuzz.api;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.personal.fizzbang.api.schema.FizzBangResponse;
-import com.personal.fizzbang.api.schema.NumberRequest;
+import com.personal.fizzbuzz.api.schema.FizzBuzzResponse;
+import com.personal.fizzbuzz.api.schema.NumberRequest;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.http.converter.HttpMessageNotReadableException;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @AllArgsConstructor
-public class FizzBangController {
+public class FizzBuzzController {
 
-    private FizzBangService fizzBangService;
+    private FizzBuzzService fizzBuzzService;
 
-    @PostMapping("/fizzbang")
+    @PostMapping("/fizzbuzz")
     @ResponseBody
-    public FizzBangResponse processRequest(@RequestBody NumberRequest numberRequest) {
-        return fizzBangService.fizzBangTheRequest(numberRequest);
+    public FizzBuzzResponse processRequest(@RequestBody NumberRequest numberRequest) {
+        return fizzBuzzService.fizzBuzzTheRequest(numberRequest);
     }
 
     @ExceptionHandler

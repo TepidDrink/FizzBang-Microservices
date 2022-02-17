@@ -1,13 +1,13 @@
-package com.personal.fizzbang;
+package com.personal.fizzbuzz;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FizzBangApplication {
+public class FizzBuzzApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FizzBangApplication.class, args);
+		SpringApplication.run(FizzBuzzApplication.class, args);
 	}
 
 }

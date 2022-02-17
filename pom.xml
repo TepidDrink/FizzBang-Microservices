@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.personal</groupId>
-	<artifactId>fizzbang</artifactId>
+	<artifactId>fizzbuzz</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>FizzBang</name>
-	<description>FizzBang as a Microservice</description>
+	<name>FizzBuzz</name>
+	<description>FizzBuzz as a Microservice</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

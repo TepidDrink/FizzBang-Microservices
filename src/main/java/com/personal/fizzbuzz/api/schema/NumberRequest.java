@@ -1,4 +1,4 @@
-package com.personal.fizzbang.api.schema;
+package com.personal.fizzbuzz.api.schema;
 
 import lombok.Getter;
 import lombok.Setter;
