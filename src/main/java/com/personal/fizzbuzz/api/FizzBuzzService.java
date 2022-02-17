@@ -10,10 +10,9 @@ public class FizzBuzzService {
     static final String BUZZ = "buzz";
 
     public FizzBuzzResponse fizzBuzzTheRequest(NumberRequest request) {
-        FizzBuzzResponse fizzBuzzResponse = FizzBuzzResponse.builder()
+        return FizzBuzzResponse.builder()
                 .output(fizzBuzzCalculation(request.getInput()))
                 .build();
-        return fizzBuzzResponse;
     }
 
     private String fizzBuzzCalculation(Integer input) {
