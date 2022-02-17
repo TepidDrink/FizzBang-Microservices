@@ -73,4 +73,11 @@ public class FizzBangServiceTests {
         FizzBangResponse response = fizzBangService.fizzBangTheRequest(request);
         assertEquals(FIZZ + BANG, response.getOutput());
     }
+
+    @Test
+    public void test_30_returns_fizzbang() {
+        request.setInput(30);
+        FizzBangResponse response = fizzBangService.fizzBangTheRequest(request);
+        assertEquals(FIZZ + BANG, response.getOutput());
+    }
 }
