@@ -11,14 +11,14 @@ import org.mockito.junit.MockitoJUnitRunner;
 public class FizzBuzzControllerTests {
 
     @Mock
-    private FizzBuzzService fizzBangService;
+    private FizzBuzzService fizzBuzzService;
 
     @InjectMocks
-    private FizzBuzzController fizzBangController;
+    private FizzBuzzController fizzBuzzController;
 
     @Test
     public void testControllerTakesRequestObject() {
         NumberRequest numberRequest = new NumberRequest();
-        fizzBangController.processRequest(numberRequest);
+        fizzBuzzController.processRequest(numberRequest);
     }
 }
