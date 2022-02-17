@@ -6,8 +6,6 @@ import com.personal.fizzbuzz.api.schema.NumberRequest;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import lombok.Setter;
-import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -36,6 +34,7 @@ public class FizzBuzzController {
         return new BadRequestException(HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST.getReasonPhrase());
     }
 
+    @Getter
     @RequiredArgsConstructor
     @JsonSerialize
     class BadRequestException {
