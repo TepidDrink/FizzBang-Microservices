@@ -36,8 +36,6 @@ public class FizzBuzzController {
         return new BadRequestException(HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST.getReasonPhrase());
     }
 
-    @Getter
-    @Setter
     @RequiredArgsConstructor
     @JsonSerialize
     class BadRequestException {
