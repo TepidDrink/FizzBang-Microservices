@@ -1,5 +1,6 @@
 package com.personal.fizzbang.api;
 
+import com.personal.fizzbang.api.schema.NumberRequest;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;

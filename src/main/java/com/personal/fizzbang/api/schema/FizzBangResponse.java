@@ -1,4 +1,4 @@
-package com.personal.fizzbang.api;
+package com.personal.fizzbang.api.schema;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.Builder;
