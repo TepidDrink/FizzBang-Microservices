@@ -9,6 +9,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import static org.springframework.web.bind.annotation.RequestMethod.*;
+
 @RestController
 @AllArgsConstructor
 public class FizzBuzzController {
@@ -20,9 +22,7 @@ public class FizzBuzzController {
         return fizzBuzzService.fizzBuzzTheRequest(numberRequest);
     }
 
-    @RequestMapping(path = "*",
-            method = {RequestMethod.GET, RequestMethod.POST, RequestMethod.DELETE, RequestMethod.HEAD,
-                    RequestMethod.OPTIONS, RequestMethod.PATCH, RequestMethod.PUT, RequestMethod.TRACE})
+    @RequestMapping(path = "*", method = {GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS, TRACE})
     @ResponseStatus(value= HttpStatus.BAD_REQUEST)
     public BadRequestException processRequestWrongEndpoint(@RequestBody NumberRequest numberRequest) {
         return handleAllExceptions(null);
