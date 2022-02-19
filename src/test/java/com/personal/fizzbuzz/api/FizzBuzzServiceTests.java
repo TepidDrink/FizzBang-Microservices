@@ -11,6 +11,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 import static com.personal.fizzbuzz.api.FizzBuzzService.BUZZ;
 import static com.personal.fizzbuzz.api.FizzBuzzService.FIZZ;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 @RunWith(MockitoJUnitRunner.class)
 public class FizzBuzzServiceTests {
@@ -43,7 +44,7 @@ public class FizzBuzzServiceTests {
     public void test_1_returns_null() {
         request.setInput(1);
         FizzBuzzResponse response = fizzBuzzService.fizzBuzzTheRequest(request);
-        assertEquals(null, response.getOutput());
+        assertNull(response.getOutput());
     }
 
     @Test

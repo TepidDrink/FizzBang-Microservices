@@ -16,7 +16,7 @@ public class FizzBuzzService {
     }
 
     private String fizzBuzzCalculation(Integer input) {
-        String output = "";
+        var output = "";
         if (input % 3 == 0) {
             output += FIZZ;
         }
