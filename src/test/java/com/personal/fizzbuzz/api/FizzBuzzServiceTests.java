@@ -1,8 +1,6 @@
 package com.personal.fizzbuzz.api;
 
-import com.personal.fizzbuzz.api.schema.FizzBuzzResponse;
 import com.personal.fizzbuzz.api.schema.NumberRequest;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -19,12 +17,7 @@ public class FizzBuzzServiceTests {
     @InjectMocks
     private FizzBuzzService fizzBuzzService;
 
-    private NumberRequest request;
-
-    @Before
-    public void setup() {
-        request = new NumberRequest();
-    }
+    private final NumberRequest request = new NumberRequest();;
 
     @Test
     public void test_3_fizz() {
